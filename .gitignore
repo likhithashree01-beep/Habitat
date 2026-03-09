@@ -1,0 +1,13 @@
+.DS_Store
+__pycache__/
+.ipynb_checkpoints/
+*.pyc
+
+/outputs/logs/*
+/outputs/videos/*
+!/outputs/logs/.gitkeep
+!/outputs/videos/.gitkeep
+
+/datasets/test_scenes/
+/datasets/scene_datasets/
+/datasets/pointnav/
