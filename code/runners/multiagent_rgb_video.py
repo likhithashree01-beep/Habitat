@@ -1,11 +1,14 @@
 import imageio.v2 as imageio
 import numpy as np
+from pathlib import Path
 
 import habitat_sim
 from habitat_sim.agent import ActionSpec, ActuationSpec, AgentConfiguration, AgentState
 from habitat_sim.sensor import CameraSensorSpec, SensorSubType, SensorType
 
-from code.utils.paths import DATASETS_DIR, VIDEOS_DIR
+PROJECT_ROOT = Path(__file__).resolve().parents[2]
+DATASETS_DIR = PROJECT_ROOT / "datasets"
+VIDEOS_DIR = PROJECT_ROOT / "outputs" / "videos"
 
 
 def make_rgb_sensor(uuid: str, height: int = 256, width: int = 256) -> CameraSensorSpec:
